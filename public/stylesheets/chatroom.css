@@ -1,0 +1,16 @@
+.selected {
+  width: 250px;
+  border: 2px solid #ff0000;
+}
+
+.chatwindow {
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  width: 800px;
+  height: 300px;
+  overflow: scroll;
+}
+
+#chatbox {
+	width: 750px;
+}

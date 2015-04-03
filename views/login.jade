@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/chatroom.css')
+    block styles
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/chatroom.js')
+    block scripts
+  body
+    h2 Welcome to Chatroom
+    div(class = 'container')
+        h5 Enter Preferred nickname
+        input#nickname.selected(type='text')
+        input#enter(type='submit', value='Enter')
+        .chatwindow
+        input#chatbox(type='text', disabled = true)
+        input#send(type='submit', value='Send', disabled = true)
