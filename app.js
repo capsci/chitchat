@@ -15,7 +15,7 @@ var port = 3000;
 server.listen(port);
 console.log("Socket.io server listening at http://127.0.0.1:" + port);
 
-var sio = require('socket.io').listen(server);
+var sio = require('socket.io')(server);
 
 sio.sockets.on('connection', function(socket){
   console.log('Web client connected');
@@ -25,7 +25,7 @@ sio.sockets.on('connection', function(socket){
 });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -95,8 +95,8 @@ client.on('error', function() {
 
 var id = 0;
 //create a socket
-var sio = require('socket.io').listen(server);
-sio.sockets.on('connection', function(socket) {
+var sio = require('socket.io')(server);
+sio.on('connection', function(socket) {
   console.log('User Connected');
   socket.emit('ss-confirmation', {text: 'Success'});
   socket.on('nickname', function(data) {

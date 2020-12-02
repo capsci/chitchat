@@ -1,7 +1,14 @@
-<<<<<<< HEAD
 # ChatRoom
 Chatroom Application using NodeJS
-=======
+
 # chitchat
 A chatroom where multiple users can connect and send messages
->>>>>>> dd50ccf393b02519de47280f4aa4c71b1909697e
+
+## Start Local Redis Server
+
+```bash
+cd <redis-installation-dir>
+src/redis-server
+```
+
+Check [lastest documentation](https://redis.io/topics/quickstart) to install redis on your machine
